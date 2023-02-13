@@ -1,5 +1,6 @@
-function Card({ data }) {
-    console.log(data);
+import Link from "next/link";
+
+function Card({ data }) { 
 
     return (
         <div>
@@ -10,15 +11,17 @@ function Card({ data }) {
                 <div className="card-body">
                     <h2 className="card-title">{data?.title}!</h2>
                     <small>{data?.description.slice(0, 100)}</small>
-                    <p>Category: {data?.category}</p>
-                    <p>Price: {data?.price}</p>
-                    <p>Rating: {data?.rating?.rate}</p>
+                    <p className="text-center">Category: {data?.category}</p>
+                    <p className="text-center font-semibold">Price: {data?.price}</p>
+                    <p className="text-center font-semibold">Rating: {data?.rating?.rate}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <Link href={`/products/${data?.id.toString()}`}>
+                            < button className="btn btn-primary">Buy Now</button>
+                        </Link>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

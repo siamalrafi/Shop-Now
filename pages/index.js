@@ -28,6 +28,7 @@ export default function Home({ datas }) {
           </div>
         </div>
       </div>
+      <h1 className="text-center my-10 text-2xl font-bold">Our All Products</h1>
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
         {datas?.map((data, i) => <Card key={i} data={data}></Card>)}
