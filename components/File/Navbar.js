@@ -1,9 +1,13 @@
+import Link from "next/link";
+
 function Navbar() {
     return (
         <div>
             <div className="navbar bg-neutral">
                 <div className="flex-1">
-                    <a className="btn text-white normal-case text-xl">Shop Now</a>
+                    <Link href={'/'}>
+                        <p className="  text-white normal-case text-xl">Shop Now</p>
+                    </Link>
                 </div>
                 <div className="flex-none gap-2">
                     <div className="form-control">
