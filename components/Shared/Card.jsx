@@ -14,11 +14,11 @@ function Card({ data }) {
                     <p className="text-center">Category: {data?.category}</p>
                     <p className="text-center font-semibold">Price: {data?.price}</p>
                     <p className="text-center font-semibold">Rating: {data?.rating?.rate}</p>
-                    {/* <div className="card-actions justify-end">
+                    <div className="card-actions justify-end">
                         <Link href={`/products/${data?.id.toString()}`}>
-                            < button className="btn btn-primary">Buy Now</button>
+                            < button className="text-primary text-2xl">Buy Now</button>
                         </Link>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </div >
