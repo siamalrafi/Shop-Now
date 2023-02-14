@@ -25,7 +25,7 @@ function product({ product }) {
 
     return (
         <div className="grid justify-items-center">
-            <div className="card w-96 bg-base-100 shadow-xl  ">
+            <div className="card bg-base-100 shadow-xl  ">
                 <figure><img src={image} alt="product.img" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
