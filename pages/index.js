@@ -31,13 +31,7 @@ export default function Home({ datas }) {
       </div>
 
 
-      {/* ------------------------------------------
-                                   post ---------------------------------------- */}
-
-      {/* <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
-        {datas?.map((data, i) => <Link key={i} href={`/posts/${data.id}`}>hellow</Link>)}
-      </div> */}
-
+ 
 
     </>
   )

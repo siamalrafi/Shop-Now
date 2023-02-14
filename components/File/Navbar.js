@@ -1,6 +1,11 @@
+import { AuthContext } from "@/Context/AuthProvider";
 import Link from "next/link";
+import { useContext } from "react";
 
 function Navbar() {
+    const { user, logOut } = useContext(AuthContext);
+
+
     return (
         <div>
             <div className="navbar bg-neutral">
@@ -16,7 +21,7 @@ function Navbar() {
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img src='https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg' />
+                                <img title={user?.displayName} src='https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg' />
                             </div>
                         </label>
                         <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
@@ -26,8 +31,11 @@ function Navbar() {
                                     <span className="badge">New</span>
                                 </Link>
                             </li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
+                            <li>
+                                <Link href={'/register'}>Register</Link></li>
+
+                            <li><Link href='/login'>Login</Link></li>
+                            <li><Link onClick={() => logOut()} href={'/'}>Logout</Link></li>
                         </ul>
                     </div>
                 </div>
