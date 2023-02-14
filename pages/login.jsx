@@ -5,9 +5,7 @@ import { toast } from "react-hot-toast";
 
 function Login() {
     const { user, signIn } = useContext(AuthContext);
-    const location = useRouter();
-
-
+    const router = useRouter();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -20,6 +18,7 @@ function Login() {
             .then((result) => {
                 console.log(result);
                 toast.success('user login successfully.');
+                router.push('/')
             })
             .catch((error) => {
                 toast.error(`${error.message}`)
